@@ -3,7 +3,7 @@ Repositório para desenvolvimento das atividades da cadeira Simulação e Métod
 
 ## M2 - Gerador de números pseudoaleatórios (0 a 1)
 
-Para gerar números pseudoaleatórios, foi utilizado o método da congruência linear, onde cada valor é calculado a partir do anterior e depois normalizado para ficar entre 0 e 1.
+Para gerar números pseudoaleatórios, foi utilizado o método da congruência linear (LCG), onde cada valor é calculado a partir do anterior e depois normalizado para ficar entre 0 e 1.
 
     Declarar:
         a, c, M, X0 : inteiro

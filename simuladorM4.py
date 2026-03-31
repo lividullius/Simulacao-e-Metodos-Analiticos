@@ -1,14 +1,15 @@
 import heapq
 
 
-# =========================
 # M2 - Gerador LCG
-# =========================
+
+#paramentros do gerador
 a = 1103515245
 c = 12345
 M = 2**31
 seed = 12345
 
+#guarda o último número gerado
 _last_random = seed
 
 
@@ -25,27 +26,30 @@ def uniforme(minimo, maximo):
     return minimo + (maximo - minimo) * u
 
 
-# =========================
+
 # M4 - Simulador de Filas
-# =========================
+
 class SimuladorEventos:
     def __init__(self, num_servidores=1, capacidade_sistema=5, limite_randomicos=100000):
-        self.num_servidores = num_servidores
-        self.capacidade_sistema = capacidade_sistema
-        self.limite_randomicos = limite_randomicos
+        #parametros do sistema
+        self.num_servidores = num_servidores 
+        self.capacidade_sistema = capacidade_sistema 
+        self.limite_randomicos = limite_randomicos 
 
-        self.relogio = 0.0
-        self.eventos = []
-        self.fila_espera = []
 
-        self.ocupados = 0
-        self.randomicos_utilizados = 0
+        #atributos 
+        self.relogio = 0.0 
+        self.eventos = [] 
+        self.fila_espera = [] 
+
+        self.ocupados = 0 
+        self.randomicos_utilizados = 0 
 
         self.tempo_estados = [0.0 for _ in range(capacidade_sistema + 1)]
-        self.ultimo_tempo = 0.0
+        self.ultimo_tempo = 0.0 
 
-        self.total_atendidos = 0
-        self.total_perdidos = 0
+        self.total_atendidos = 0 
+        self.total_perdidos = 0 
 
     def clientes_no_sistema(self):
         return self.ocupados + len(self.fila_espera)
