@@ -14,14 +14,14 @@ _last_random = seed
 
 
 def next_random():
-    """Gera um número pseudoaleatório uniforme entre 0 e 1."""
+    #Gera um número pseudoaleatório uniforme entre 0 e 1.
     global _last_random
     _last_random = (a * _last_random + c) % M
     return _last_random / M
 
 
 def uniforme(minimo, maximo):
-    """Converte o valor do LCG para uma uniforme no intervalo [minimo, maximo]."""
+    #Converte o valor do LCG para uma uniforme no intervalo [minimo, maximo].
     u = next_random()
     return minimo + (maximo - minimo) * u
 
