@@ -179,9 +179,6 @@ Nesse modelo, os clientes chegam inicialmente na Fila 1 e, após o atendimento, 
             prob[k] ← tempo_estado[k] / tempo_total
 
 
----
-Resultados apresentados
-
 Para cada fila:
 
 - configuração da fila (G/G/servidores/capacidade)  
@@ -189,7 +186,5 @@ Para cada fila:
 - distribuição de probabilidades  
 - número de clientes atendidos  
 - número de clientes perdidos  
-
-Também é apresentado:
 
 - tempo global da simulação
