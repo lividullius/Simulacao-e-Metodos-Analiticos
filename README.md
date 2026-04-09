@@ -77,10 +77,6 @@ A simulação é controlada por uma lista de eventos (agenda), onde cada evento 
 Extensão do simulador para suportar uma rede de filas conectadas em série (tandem).  
 Nesse modelo, os clientes chegam inicialmente na Fila 1 e, após o atendimento, são encaminhados para a Fila 2. Após o atendimento na segunda fila, o cliente deixa o sistema.
 
----
-
-## Funcionamento geral
-
     Início
 
     Inicializar variáveis do sistema  
@@ -114,9 +110,8 @@ Nesse modelo, os clientes chegam inicialmente na Fila 1 e, após o atendimento, 
 
     Atualizar o relógio para o tempo do evento  
 
-    ---
 
-    ### Evento CHEGADA_EXTERNA_FILA1
+    Evento CHEGADA_EXTERNA_FILA1
 
     Gerar e agendar próxima chegada externa  
 
@@ -133,9 +128,8 @@ Nesse modelo, os clientes chegam inicialmente na Fila 1 e, após o atendimento, 
      cliente é perdido  
     fim se  
 
-    ---
-
-    ### Evento SAIDA_FILA1
+ 
+    Evento SAIDA_FILA1
 
     Registrar cliente atendido na Fila 1  
 
@@ -162,9 +156,8 @@ Nesse modelo, os clientes chegam inicialmente na Fila 1 e, após o atendimento, 
      cliente é perdido  
     fim se  
 
-    ---
 
-    ### Evento SAIDA_FILA2
+    Evento SAIDA_FILA2
 
     Registrar cliente atendido na Fila 2  
 
@@ -178,17 +171,16 @@ Nesse modelo, os clientes chegam inicialmente na Fila 1 e, após o atendimento, 
 
     Fim enquanto
 
-    ---
 
-    ## Cálculo das probabilidades
+    Cálculo das probabilidades
 
     Para cada fila i:
         Para cada estado k:
             prob[k] ← tempo_estado[k] / tempo_total
 
----
 
-## Resultados apresentados
+---
+Resultados apresentados
 
 Para cada fila:
 
