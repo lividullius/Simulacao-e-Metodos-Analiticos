@@ -72,8 +72,4 @@ O simulador foi testado com 100.000 números aleatórios, iniciando com filas va
 - Gerador LCG embutido com as constantes do módulo M2
 - Coleta automática de estatísticas de tempo por estado
 
-## Arquivos
 
-|---|---|
-| `simulador_rede_filas.py` | Código principal do simulador |
-| `modelo.yml` | Rede com 3 filas e feedback probabilístico |
