@@ -1,4 +1,4 @@
-# Simulador Generalizado de Rede de Filas
+# Simulador Generalizado Para Rede de Filas
 Este simulador suporta qualquer topologia de rede de filas definida em um arquivo de configuração YAML.
 
 ## Requisitos
@@ -73,7 +73,7 @@ O simulador foi testado com 100.000 números aleatórios, iniciando com filas va
 - Coleta automática de estatísticas de tempo por estado
 
 ## Arquivos
-| Arquivo | Descrição |
+
 |---|---|
 | `simulador_rede_filas.py` | Código principal do simulador |
 | `modelo.yml` | Rede com 3 filas e feedback probabilístico |
