@@ -1,0 +1,35 @@
+#Simulação com Rede de Filas
+#simulador baseado na imagem do moodle
+
+simulation:
+  num_randomicos: 100000
+  primeira_chegada: 2.0
+
+queues:
+  Q1:
+    servidores: 1
+    capacidade: 10        # G/G/1 sem limite explícito: aproximado por capacidade alta
+    chegada: [2.0, 4.0]
+    atendimento: [1.0, 2.0]
+    rede:
+      Q2: 0.8             # 80% vão para Q2
+      Q3: 0.2             # 20% vão para Q3
+
+  Q2:
+    servidores: 2
+    capacidade: 5
+    chegada: null
+    atendimento: [4.0, 6.0]
+    rede:
+      Q1: 0.3             # 30% voltam para Q1
+      Q3: 0.5             # 50% vão para Q3
+                          # 20% saem do sistema (resto até 1.0)
+
+  Q3:
+    servidores: 2
+    capacidade: 10
+    chegada: null
+    atendimento: [5.0, 15.0]
+    rede:
+      Q2: 0.7             # 70% voltam para Q2
+                          # 30% saem do sistema (resto até 1.0)
